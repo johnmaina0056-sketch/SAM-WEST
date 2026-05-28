@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAM WEST DISTRIBUTIORS</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#111;
+}
+
+header{
+background:#111;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+color:#d4a900;
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#d4a900;
+}
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7))
+center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:#fff;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:800px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+background:#d4a900;
+color:#111;
+padding:15px 35px;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
+display:inline-block;
+}
+
+section{
+padding:70px 50px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.section-title h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+.card-content h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+margin:15px 0;
+}
+
+.cart-btn{
+background:#111;
+color:#fff;
+border:none;
+padding:12px 20px;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.cart-btn:hover{
+background:#d4a900;
+color:#111;
+}
+
+.category-links{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.category-links a{
+background:#fff;
+padding:25px;
+text-align:center;
+text-decoration:none;
+color:#111;
+font-weight:bold;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+display:flex;
+flex-direction:column;
+gap:12px;
+font-size:18px;
+transition:0.3s;
+}
+
+.category-links a:hover{
+background:#111;
+color:#fff;
+transform:translateY(-5px);
+}
+
+.category-links i{
+font-size:30px;
+color:#d4a900;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+margin-bottom:15px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.faq-question{
+width:100%;
+background:#111;
+color:#fff;
+padding:18px 20px;
+border:none;
+font-size:18px;
+font-weight:bold;
+text-align:left;
+cursor:pointer;
+display:flex;
+justify-content:space-between;
+}
+
+.faq-answer{
+display:none;
+padding:20px;
+background:#f9f9f9;
+line-height:1.7;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.testimonial-card{
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.testimonial-card:hover{
+transform:translateY(-5px);
+}
+
+.quote-icon{
+font-size:30px;
+color:#d4a900;
+margin-bottom:15px;
+}
+
+.contact-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.contact-form button{
+width:100%;
+background:#111;
+color:#fff;
+padding:15px;
+border:none;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.delivery{
+background:#f7f7f7;
+text-align:center;
+border-radius:10px;
+}
+
+.cart{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#111;
+color:#fff;
+padding:15px 20px;
+border-radius:50px;
+font-weight:bold;
+display:flex;
+align-items:center;
+gap:10px;
+cursor:pointer;
+z-index:2000;
+}
+
+footer{
+background:#111;
+color:#fff;
+padding:60px 50px 30px;
+margin-top:50px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+margin-bottom:30px;
+}
+
+.footer-logo{
+font-size:30px;
+font-weight:bold;
+color:#d4a900;
+margin-bottom:15px;
+}
+
+.footer-title{
+font-size:22px;
+margin-bottom:20px;
+color:#d4a900;
+}
+
+.footer-links a{
+display:block;
+color:#ccc;
+text-decoration:none;
+margin-bottom:12px;
+}
+
+.footer-links a:hover{
+color:#d4a900;
+}
+
+.footer-contact p,
+.footer-features p{
+margin-bottom:15px;
+color:#ccc;
+}
+
+.footer-bottom{
+border-top:1px solid #333;
+padding-top:20px;
+text-align:center;
+color:#aaa;
+}
+
+#cart-popup{
+display:none;
+position:fixed;
+right:20px;
+bottom:90px;
+width:320px;
+max-height:450px;
+overflow-y:auto;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+z-index:3000;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+section{
+padding:50px 20px;
+}
+
+footer{
+padding:50px 20px 25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+SAM WEST DISTRIBUTIORS
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#allproducts">Products</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>
+Wholesale Groceries & Household Supplies in Kenya
+</h1>
+
+<p>
+Your trusted online marketplace for groceries,
+drinks, household products, detergents,
+snacks, and wholesale supplies across Kenya.
+</p>
+
+<a href="#allproducts" class="btn">
+Browse Products
+</a>
+
+</div>
+
+</section>
+
+<section id="categories">
+
+<div class="section-title">
+<h2>Product Categories</h2>
+<p>Browse our wide selection of wholesale products</p>
+</div>
+
+<div class="category-links">
+<a href="#allproducts" class="category-label">
+  <i class="fas fa-boxes"></i>
+  All Products
+</a>
+<a href="#hot-deals">
+<i class="fas fa-fire"></i>
+Hot Deals
+</a>
+
+<a href="#cooking-oil">
+<i class="fas fa-oil-can"></i>
+Cooking Oil & Fats
+</a>
+
+<a href="#rice-sugar">
+<i class="fas fa-bowl-rice"></i>
+Rice, Sugar & Flour
+</a>
+
+<a href="#drinks">
+<i class="fas fa-wine-bottle"></i>
+Drinks & Juices
+</a>
+
+<a href="#soaps">
+<i class="fas fa-pump-soap"></i>
+Soaps & Detergents
+</a>
+
+<a href="#baby-care">
+<i class="fas fa-baby"></i>
+Baby & Personal Care
+</a>
+
+<a href="#snacks">
+<i class="fas fa-cookie-bite"></i>
+Snacks
+</a>
+
+<a href="#biscuits">
+<i class="fas fa-cookie"></i>
+Biscuits & Cookies
+</a>
+
+<a href="#cleaning">
+<i class="fas fa-spray-can-sparkles"></i>
+Cleaning & Hygiene
+</a>
+
+</div>
+
+</section>
+
+<!-- CATEGORY SECTIONS -->
+
+
+<section id="hot-deals" class="category-section" style="display:none;">
+  
+  <div class="section-title">
+    <h2>Hot Deals</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Egg crate</h3>
+        <p class="price">KSh 380</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>20L Rina Cooking Oil</h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>10L RINA cooking oil</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>20L SALIT/BAHARI/POSTMAN/PIKA</h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>10L SALIT/BAHARI/POSTMAN/PIKA</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+<section id="cooking-oil" class="category-section" style="display:none;">
+  
+  <div class="section-title">
+    <h2>Cooking Oil & Fats</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>20L RINA Cooking Oil</h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>10L RINA Cooking Oil</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>20L SALIT/BAHARI/POSTMAN/PIKA</h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>10L SALIT/BAHARI/POSTMAN/PIKA</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>20L RINSUN Sunflower Oil</h3>
+        <p class="price">KSh 4,200</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+<section id="rice-sugar" class="category-section" style="display:none;">
+  
+  <div class="section-title">
+    <h2>Rice, Sugar & Flour</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>25kg BIIYANI Rice</h3>
+        <p class="price">KSh 2,100</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>25kg BASMATI Rice</h3>
+        <p class="price">KSh 2,800</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>25kg PISHORI Rice </h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>25Kg SINDANO Rice</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>50Kg Sugar Brown</h3>
+        <p class="price">KSh 6,400</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+<section id="drinks" class="category-section" style="display:none;">
+  
+  <div class="section-title">
+    <h2>Drinks & Juices</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>RED BULL 24 PK</h3>
+        <p class="price">KSh 2,400</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>AZAM 24pk</h3>
+        <p class="price">KSh 860</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Predator 500ml 12pcs</h3>
+        <p class="price">KSh 480</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Power play 500ml 12pcs</h3>
+        <p class="price">KSh 500</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Pick N Peel Orange1L</h3>
+        <p class="price">KSh 150</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+<section id="soaps" class="category-section" style="display:none;">
+  
+  <div class="section-title">
+    <h2>Soaps & Detergents</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1583947582886-f40ec95dd752?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Menengai Bar soap 1kg(25pcs)</h3>
+        <p class="price">KSh 3,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Msafi Bar Soap(10pcs)</h3>
+        <p class="price">KSh 1,150
+      </p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Bidco Cream Bar Soaap</h3>
+        <p class="price">KSh 2,300</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1619440166462-4a3c8d7f1d7e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Sunlight washing Powder 500g(24pcs)</h3>
+        <p class="price">KSh 2,800</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+</section>
+
+
+<section id="baby-care" class="category-section" style="display:none;">
+  
+  <div class="section-title">
+    <h2>Baby & Personal Care</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Softcare Gold Dipers Big parck</h3>
+        <p class="price">KSh 550</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1608501078510-3d4a7a1b8b18?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Cuettie Diapers Big Pack</h3>
+        <p class="price">KSh 500</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Hopebaby pull-up</h3>
+        <p class="price">KSh 550</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7a6?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Adult diapers Medium</h3>
+        <p class="price">KSh 650</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1620916566889-5b2c6a0c7f9d?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Adult diapes Large</h3>
+        <p class="price">KSh 700</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<section id="snacks" class="category-section" style="display:none;">
+  
+  <div class="section-title">
+    <h2>Snacks</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1621939514649-280e2f5f1c3a?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Krackles 24pk</h3>
+        <p class="price">KSh 480</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1621939514661-5f7b9a7b7c1f?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>m&m's Chocolate</h3>
+        <p class="price">KSh 100</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1612203985729-70726954388a?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Chevda Mix</h3>
+        <p class="price">KSh 60</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1613145994095-3c1a8c2f6f3a?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Haribo Gummy Bears</h3>
+        <p class="price">KSh 80</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1613145994126-9a2c9f1b7e2a?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Mentos Roll</h3>
+        <p class="price">KSh 30</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<section id="biscuits" class="category-section" style="display:none;">
+  
+  <div class="section-title">
+    <h2>Biscuits & Cookies</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>McVites Digestive</h3>
+        <p class="price">KSh 120</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606313564172-8f8b6a5b6c7e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Oreo original</h3>
+        <p class="price">KSh 85</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606313564199-5a8c2b7e1f2a?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Oreo Golden</h3>
+        <p class="price">KSh 90</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606313564188-7c9d2e3f5a1b?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Maryland Cookies</h3>
+        <p class="price">KSh 110</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606313564210-2b3c4d5e6f7a?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Oreo strawberry</h3>
+        <p class="price">KSh 95</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<section id="cleaning" class="category-section" style="display:none;">
+    
+  <div class="section-title">
+    <h2>Cleaning & Hygiene</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Velvet Tissues Regular</h3>
+        <p class="price">KSh 350</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581579185169-3c9d6e8f2d77?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>poshy Tissue </h3>
+        <p class="price">KSh 320</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>serviettes Pack</h3>
+        <p class="price">KSh 180</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1619440166462-4a3c8d7f1d7e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Scouring Powder 500g</h3>
+        <p class="price">KSh 80</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Dishwassher Liquid 500ml</h3>
+        <p class="price">KSh 120</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
+  <section  class="category-section">
+  
+  <div class="section-title">
+    <h2 id="allproducts">All Products</h2>
+    <p>Complete list of all available products</p>
+  </div>
+  
+  
+  
+
+
+<section id="hot-deals" class="category-section">
+  
+  <div class="section-title">
+    <h2>Hot Deals</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Eggs%20crate.jpg">
+      <div class="card-content">
+        <h3>Egg crate</h3>
+        <p class="price">KSh 380</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/20%20Litres%20RINA%20Cooking%20Oil.jpg">
+      <div class="card-content">
+        <h3>20L Rina Cooking Oil</h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/10%20Litres%20RINA%20Cooking%20Oil.jpg">
+      <div class="card-content">
+        <h3>10L RINA cooking oil</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/download.jpg">
+      <div class="card-content">
+        <h3>20L SALIT/BAHARI/POSTMAN/PIKA</h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/10%20litres%20SALIT,%20BAHARI,%20POSTMAN%20Cooking%20Oil.jpg">
+      <div class="card-content">
+        <h3>10L SALIT/BAHARI/POSTMAN/PIKA</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+<section id="cooking-oil" class="category-section">
+  
+  <div class="section-title">
+    <h2>Cooking Oil & Fats</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/20%20Litres%20RINA%20Cooking%20Oil.jpg">
+      <div class="card-content">
+        <h3>20L RINA Cooking Oil</h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/10%20Litres%20RINA%20Cooking%20Oil.jpg">
+      <div class="card-content">
+        <h3>10L RINA Cooking Oil</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/download.jpg">
+      <div class="card-content">
+        <h3>20L SALIT/BAHARI/POSTMAN/PIKA</h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/10%20litres%20SALIT,%20BAHARI,%20POSTMAN%20Cooking%20Oil.jpg">
+      <div class="card-content">
+        <h3>10L SALIT/BAHARI/POSTMAN/PIKA</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/20%20Litres%20RINSUN%20Sunflower%20Vegetable%20Oil.jpg">
+      <div class="card-content">
+        <h3>20L RINSUN Sunflower Oil</h3>
+        <p class="price">KSh 4,200</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+<section id="rice-sugar" class="category-section">
+  
+  <div class="section-title">
+    <h2>Rice, Sugar & Flour</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/25kgs%20of%20BIRIYANI%20RICE.jpg">
+      <div class="card-content">
+        <h3>25kg BIIYANI Rice</h3>
+        <p class="price">KSh 2,100</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/25kgs%20BASIMATI%20RICE.jpg">
+      <div class="card-content">
+        <h3>25kg BASMATI Rice</h3>
+        <p class="price">KSh 2,800</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/25kgs%20PISHORI%20RICE.jpg">
+      <div class="card-content">
+        <h3>25kg PISHORI Rice </h3>
+        <p class="price">KSh 4,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/25kgs%20SINDANO%20RICE.jpg">
+      <div class="card-content">
+        <h3>25Kg SINDANO Rice</h3>
+        <p class="price">KSh 2,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/50kgs%20SUGAR%20(Brown).jpg">
+      <div class="card-content">
+        <h3>50Kg Sugar Brown</h3>
+        <p class="price">KSh 6,400</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+<section id="drinks" class="category-section">
+  
+  <div class="section-title">
+    <h2>Drinks & Juices</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/RED%20BULL%20(24%20Pack).jpg">
+      <div class="card-content">
+        <h3>RED BULL 24 PK</h3>
+        <p class="price">KSh 2,400</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/AZAM%20Energy%20Drink%20300ml%20(24%20Pack).jpg">
+      <div class="card-content">
+        <h3>AZAM 24pk</h3>
+        <p class="price">KSh 860</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/PREDATOR%20Energy%20Drink%20500ml%20(12pcs).jpg">
+      <div class="card-content">
+        <h3>Predator 500ml 12pcs</h3>
+        <p class="price">KSh 480</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/POWER%20PLAY%20Energy%20Drink%20500ml%20(12Pcs).jpg">
+      <div class="card-content">
+        <h3>Power play 500ml 12pcs</h3>
+        <p class="price">KSh 500</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Pick%20N%20Peel%20Pure%20Fruit%20Juice%20Tetra%20Orange.jpg">
+      <div class="card-content">
+        <h3>Pick N Peel Orange1L</h3>
+        <p class="price">KSh 150</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<section id="soaps" class="category-section">
+  
+  <div class="section-title">
+    <h2>Soaps & Detergents</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/MENENGAI%20Bar%20Soap%201Kg%20(A%20carton%20of%2025pcs).jpg">
+      <div class="card-content">
+        <h3>Menengai Bar soap 1kg(25pcs)</h3>
+        <p class="price">KSh 3,000</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/MSAFI%20Bar%20Soap%201Kg%20(10Pcs).jpg">
+      <div class="card-content">
+        <h3>Msafi Bar Soap(10pcs)</h3>
+        <p class="price">KSh 1,150
+      </p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/BIDCO%20Cream%20Bar%20Soap%20800grams%20(25Pcs).jpg">
+      <div class="card-content">
+        <h3>Bidco Cream Bar Soaap</h3>
+        <p class="price">KSh 2,300</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Sunlight%20Washing%20Powder%20500grams%20(24%20pieces).jpg">
+      <div class="card-content">
+        <h3>Sunlight washing Powder 500g(24pcs)</h3>
+        <p class="price">KSh 2,800</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+</section>
+
+
+<section id="baby-care" class="category-section">
+  
+  <div class="section-title">
+    <h2>Baby & Personal Care</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/softcare.jpg">
+      <div class="card-content">
+        <h3>Softcare Gold Dipers Big parck</h3>
+        <p class="price">KSh 550</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/cuettie%20baby%20diapers%20High%20count(big%20pack).jpg">
+      <div class="card-content">
+        <h3>Cuettie Diapers Big Pack</h3>
+        <p class="price">KSh 500</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Hopebaby%20pull-up%20Baby%20diapers.jpg">
+      <div class="card-content">
+        <h3>Hopebaby pull-up</h3>
+        <p class="price">KSh 550</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Bluecare%20Pull-up%20Adult%20diapers.jpg">
+      <div class="card-content">
+        <h3>Adult diapers Medium</h3>
+        <p class="price">KSh 650</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Sunny,Bluecare%20Adult%20diapers.jpg">
+      <div class="card-content">
+        <h3>Adult diapes Large</h3>
+        <p class="price">KSh 700</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<section id="snacks" class="category-section">
+  
+  <div class="section-title">
+    <h2>Snacks</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Krackles%20Potato%20Crisps%20Assorted%2048x30g.jpg">
+      <div class="card-content">
+        <h3>Krackles 24pk</h3>
+        <p class="price">KSh 480</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/M&M'S%20Chocolate%203x200g.jpg">
+      <div class="card-content">
+        <h3>m&m's Chocolate</h3>
+        <p class="price">KSh 100</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Tropical%20Heat%20Kenyan%20Chevda%20Hot.jpg">
+      <div class="card-content">
+        <h3>Chevda Mix</h3>
+        <p class="price">KSh 60</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Haribo%20Starmix%2015x80g.jpg">
+      <div class="card-content">
+        <h3>Haribo Gummy Bears</h3>
+        <p class="price">KSh 80</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Mentos%20Monos%20Mint.jpg">
+      <div class="card-content">
+        <h3>Mentos Roll</h3>
+        <p class="price">KSh 30</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<section id="biscuits" class="category-section">
+  
+  <div class="section-title">
+    <h2>Biscuits & Cookies</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/oreo.jpg">
+      <div class="card-content">
+        <h3>McVites Digestive</h3>
+        <p class="price">KSh 120</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Oreo%20Original%20Biscuit.jpg">
+      <div class="card-content">
+        <h3>Oreo original</h3>
+        <p class="price">KSh 85</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/oreo%20golden.jpg">
+      <div class="card-content">
+        <h3>Oreo Golden</h3>
+        <p class="price">KSh 90</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Maryland%20Choc%20Chip%20Cookies.jpg">
+      <div class="card-content">
+        <h3>Maryland Cookies</h3>
+        <p class="price">KSh 110</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/oreo%20strawberry.jpg">
+      <div class="card-content">
+        <h3>Oreo strawberry</h3>
+        <p class="price">KSh 95</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<section id="cleaning" class="category-section">
+    
+  <div class="section-title">
+    <h2>Cleaning & Hygiene</h2>
+  </div>
+  
+  <div class="grid">
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Velvex%20White%20Plain%20Serviettes.jpg">
+      <div class="card-content">
+        <h3>Velvet Tissues Regular</h3>
+        <p class="price">KSh 350</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Poshy%20Serviettes.jpg">
+      <div class="card-content">
+        <h3>poshy Tissue </h3>
+        <p class="price">KSh 320</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Poshy%20Serviettes.jpg">
+      <div class="card-content">
+        <h3>serviettes Pack</h3>
+        <p class="price">KSh 180</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Vim%20Powder%20Lemon%20Fresh.jpg">
+      <div class="card-content">
+        <h3>Scouring Powder 500g</h3>
+        <p class="price">KSh 80</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.samwestdistributorssales.com/images/Velvex%20Dishwashing%20Liquid%20Lemon%20Burst.jpg">
+      <div class="card-content">
+        <h3>Dishwassher Liquid 500ml</h3>
+        <p class="price">KSh 120</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+
+</section>
+  </section>
+<section id="faq">
+
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq-container">
+
+<div class="faq-item">
+<button class="faq-question">
+How do I place a bulk order?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+You can place bulk orders through our website
+or by contacting our sales team directly.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+What is your delivery range?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+We deliver across Kenya including Nairobi,
+Mombasa, Kisumu, Nakuru, and Eldoret.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+What payment methods do you accept?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+We accept M-Pesa, cash on delivery,
+bank transfers, and debit/credit cards.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Can I return products if they are damaged?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Yes, damaged products can be returned
+within 48 hours for replacement or refund.
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="testimonials">
+
+<div class="section-title">
+<h2>What Our Customers Say</h2>
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<div class="quote-icon">
+<i class="fas fa-quote-left"></i>
+</div>
+
+<p>
+"Samwest Wholesale Hub has been a game changer
+for my retail store. The prices are unbeatable
+and the delivery is always on time!"
+</p>
+
+<h3>Jane Mwangi</h3>
+<p>Business Owner</p>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="quote-icon">
+<i class="fas fa-quote-left"></i>
+</div>
+
+<p>
+"I trust Samwest for quality and variety.
+They have everything I need to keep my kitchen stocked.
+Highly recommended!"
+</p>
+
+<h3>David Otieno</h3>
+<p>Restaurant Manager</p>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="quote-icon">
+<i class="fas fa-quote-left"></i>
+</div>
+
+<p>
+"Excellent service and great product selection.
+Ordering in bulk saves me so much money for my events."
+</p>
+
+<h3>Mary Wanjiku</h3>
+<p>Event Planner</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="delivery">
+
+<h2>Delivery Across Kenya</h2>
+
+<br>
+
+<p>
+We deliver wholesale groceries and household supplies
+to Nairobi, Mombasa, Kisumu, Nakuru,
+Eldoret, and surrounding regions.
+</p>
+
+</section>
+
+<section id="contact">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact-container">
+
+<div>
+
+<h3>SAM WEST DISTRIBUTIORS</h3>
+
+<p>Email: westsam921@gmail.com</p>
+
+<p>Phone: 0731585193</p>
+
+<p>Location: Nairobi, Kenya</p>
+
+</div>
+
+<form class="contact-form">
+
+<input type="text"
+placeholder="Your Name"
+required>
+
+<input type="email"
+placeholder="Your Email"
+required>
+
+<textarea rows="5"
+placeholder="Your Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-container">
+
+<div>
+
+<div class="footer-logo">
+SamWest Wholesale
+</div>
+
+<p>
+Your trusted wholesale partner for quality products
+at competitive prices.
+</p>
+
+<br>
+
+<p>
+Call us: 0731585193
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<h3 class="footer-title">
+Quick Links
+</h3>
+
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div class="footer-contact">
+
+<h3 class="footer-title">
+Contact Info
+</h3>
+
+<p>
+<i class="fas fa-phone"></i>
+0731585193
+</p>
+
+<p>
+<i class="fas fa-location-dot"></i>
+Kawangware, Kikuyu Road
+</p>
+
+<p>
+<i class="fas fa-envelope"></i>
+westsam921@gmail.com
+</p>
+
+</div>
+
+<div class="footer-features">
+
+<h3 class="footer-title">
+Why Choose Us
+</h3>
+
+<p>
+<i class="fas fa-circle-check"></i>
+Quality Guaranteed
+</p>
+
+<p>
+<i class="fas fa-lock"></i>
+Secure Payments
+</p>
+
+<p>
+<i class="fas fa-truck-fast"></i>
+Fast Delivery
+</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2025 SamWest Wholesale. All rights reserved.
+</div>
+
+</footer>
+
+<div id="cart-popup">
+
+<h2 style="margin-bottom:20px;">
+Shopping Cart
+</h2>
+
+<div id="cart-items"></div>
+
+<button onclick="submitOrder()"
+style="
+width:100%;
+background:#111;
+color:white;
+padding:15px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+margin-top:15px;
+">
+Submit Order
+</button>
+
+</div>
+
+<div class="cart"
+id="cart-count"
+onclick="toggleCart()">
+
+<i class="fas fa-shopping-cart"></i>
+
+Cart: 0 Items
+
+</div>
+
+<script>
+
+let cart = [];
+
+const whatsappNumber = "254731585193";
+
+function initializeButtons(){
+
+const buttons =
+document.querySelectorAll('.cart-btn');
+
+buttons.forEach(button=>{
+
+button.addEventListener('click',()=>{
+
+const card = button.closest('.card');
+
+const productName =
+card.querySelector('h3').textContent;
+
+const productPrice =
+card.querySelector('.price').textContent;
+
+cart.push({
+name:productName,
+price:productPrice
+});
+
+updateCartUI();
+
+alert(productName + " added to cart!");
+
+});
+
+});
+
+}
+
+function updateCartUI(){
+
+const cartCount =
+document.getElementById('cart-count');
+
+const cartItems =
+document.getElementById('cart-items');
+
+cartCount.innerHTML = `
+<i class="fas fa-shopping-cart"></i>
+Cart: ${cart.length} Items
+`;
+
+cartItems.innerHTML = "";
+
+cart.forEach((item,index)=>{
+
+const div = document.createElement('div');
+
+div.innerHTML = `
+<div style="
+margin-bottom:15px;
+border-bottom:1px solid #ddd;
+padding-bottom:10px;
+">
+
+<strong>${item.name}</strong><br>
+${item.price}<br><br>
+
+<button onclick="removeItem(${index})"
+style="
+background:red;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:5px;
+cursor:pointer;
+">
+Remove
+</button>
+
+</div>
+`;
+
+cartItems.appendChild(div);
+
+});
+
+}
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+updateCartUI();
+
+}
+
+function toggleCart(){
+
+const popup =
+document.getElementById('cart-popup');
+
+if(popup.style.display === 'block'){
+
+popup.style.display = 'none';
+
+}else{
+
+popup.style.display = 'block';
+
+}
+
+}
+
+function submitOrder(){
+
+if(cart.length === 0){
+
+alert("Your cart is empty!");
+
+return;
+
+}
+
+let message =
+"Hello SAM WEST DISTRIBUTIORS,%0A%0AI would like to place an order:%0A%0A";
+
+cart.forEach((item,index)=>{
+
+message +=
+`${index + 1}. ${item.name} - ${item.price}%0A`;
+
+});
+
+message += "%0AThank you.";
+
+window.open(
+`https://wa.me/${whatsappNumber}?text=${message}`,
+'_blank'
+);
+
+}
+
+initializeButtons();
+
+const categoryLinks =
+document.querySelectorAll('.category-links a');
+
+const sections =
+document.querySelectorAll('.category-section');
+
+categoryLinks.forEach(link=>{
+
+link.addEventListener('click',function(e){
+
+const targetId =
+this.getAttribute('href');
+
+const target =
+document.querySelector(targetId);
+
+/* stop errors if section does not exist */
+
+if(target){
+
+/* if it's a hidden category section */
+
+if(target.classList.contains('category-section')){
+
+e.preventDefault();
+
+sections.forEach(section=>{
+section.style.display='none';
+});
+
+target.style.display='block';
+
+target.scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+}
+
+});
+  
+});
+const faqQuestions =
+document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question=>{
+
+question.addEventListener('click',()=>{
+
+const answer =
+question.nextElementSibling;
+
+const symbol =
+question.querySelector('span');
+
+if(answer.style.display === 'block'){
+
+answer.style.display = 'none';
+
+symbol.textContent = '+';
+
+}else{
+
+answer.style.display = 'block';
+
+symbol.textContent = '-';
+
+}
+
+});
+
+});
+
+const contactForm =
+document.querySelector('.contact-form');
+
+contactForm.addEventListener('submit',function(e){
+
+e.preventDefault();
+
+const name =
+document.querySelector('input[type=\"text\"]').value;
+
+const email =
+document.querySelector('input[type=\"email\"]').value;
+
+const message =
+document.querySelector('textarea').value;
+
+const whatsappMessage =
+`Hello SAM WEST DISTRIBUTIORS,%0A%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Message: ${message}`;
+
+window.open(
+`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`,
+'_blank'
+);
+
+alert('Message sent successfully!');
+
+contactForm.reset();
+
+});
+
+</script>
+
+</body>
+</html>
+```
